@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Book Direct | The Hayes House (Preview)</title>
-  <meta name="description" content="Book the Hayes House directly with Matthew.">
+  <title>Request a Stay | The Hayes House (Preview)</title>
+  <meta name="description" content="Request a seasonal or long-term stay at the Hayes House in Schroon Lake, NY.">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -23,55 +23,127 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html" class="nav-cta">Book Direct</a></li>
+          <li><a href="index.html" class="nav-cta">Request a Stay</a></li>
           <li><a href="guide.html">Guest Guide</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  
   <main id="main">
     <section class="page-hero">
       <div class="wrap">
-        <h1>Coming soon to VRBO. Book directly with Matthew.</h1>
-        <p>The Hayes House will be listed on VRBO soon. Until then, and after, you can always book directly with Matthew and skip the booking fees.</p>
+        <h1>Request a seasonal or long-term stay</h1>
+        <p>The Hayes House is available for seasonal stays (a month or more) and long-term stays (six months or more), arranged directly with Matthew.</p>
       </div>
     </section>
     <section class="section">
       <div class="wrap">
-        <img class="feature-photo" src="images/front-of-house-1000.jpg" alt="Front of the Hayes House" style="max-width:100%;border-radius:8px">
+        <img class="feature-photo" src="images/front-of-house-1000.jpg" alt="Front of the Hayes House" width="1000" height="667" style="max-width:100%;border-radius:8px">
         <h2>About the stay</h2>
         <p>41 Hayes Road sits about 300 feet from Schroon Lake, with a short walk to shared public beach access. It is a quiet Adirondack home base for families and friends.</p>
 
-        <h2>How booking works</h2>
+        <h2>How a request works</h2>
         <ol>
-          <li>Send your dates below.</li>
+          <li>Tell us your dates, stay type, guests, and how to reach you.</li>
           <li>Matthew reads every request and replies personally.</li>
-          <li>Once Matthew replies, your requested dates get a tentative hold on our calendar while we work out the details.</li>
+          <li>Once Matthew replies, your requested dates can get a tentative hold on our calendar while we work out the details.</li>
           <li>Your stay is booked only when Matthew confirms it with you directly.</li>
         </ol>
-        <div class="card" role="note"><p><strong>Please note:</strong> sending an inquiry is not a booking or a confirmation. Matthew confirms dates personally.</p></div>
+        <div class="card" role="note"><p><strong>Please note:</strong> sending a request is not a booking or a confirmation. No payment is taken on this site. Matthew confirms dates personally.</p></div>
 
-        <h2>Request your dates</h2>
-        <form class="inquiry" id="inquiry-form" action="https://formspree.io/f/xbgggqqk" method="POST">
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_subject" value="Hayes stay inquiry">
-          <div class="form-row">
-            <div><label for="arrive">Check-in</label><input id="arrive" name="check_in" type="date" required></div>
-            <div><label for="depart">Check-out</label><input id="depart" name="check_out" type="date" required></div>
+        <h2>Request your stay</h2>
+        <form class="inquiry wizard" id="inquiry-form" action="https://formspree.io/f/myeeepde" method="POST" novalidate>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Hayes stay request">
+
+          <div class="wizard-progress" aria-hidden="true">
+            <span class="wizard-dot is-active" data-dot="1"></span>
+            <span class="wizard-dot" data-dot="2"></span>
+            <span class="wizard-dot" data-dot="3"></span>
+            <span class="wizard-dot" data-dot="4"></span>
           </div>
-          <div class="form-row">
-            <div><label for="guests">Guests</label><input id="guests" name="guests" type="number" min="1" required></div>
-            <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+          <p class="wizard-step-label" id="wizard-step-label">Step 1 of 4: Dates</p>
+
+          <div class="wizard-step is-active" data-step="1" role="group" aria-labelledby="step1-title">
+            <h3 id="step1-title">Dates and stay type</h3>
+            <div class="form-row">
+              <div>
+                <label for="check_in">Check-in</label>
+                <input id="check_in" name="check_in" type="date" required>
+              </div>
+              <div>
+                <label for="check_out">Check-out</label>
+                <input id="check_out" name="check_out" type="date" required>
+              </div>
+            </div>
+            <div>
+              <label for="stay_type">Stay type</label>
+              <select id="stay_type" name="stay_type" required>
+                <option value="">Select one</option>
+                <option value="Seasonal: month or more">Seasonal: month or more</option>
+                <option value="Long-term: 6+ months">Long-term: 6+ months</option>
+                <option value="Not sure">Not sure</option>
+              </select>
+            </div>
+            <p class="form-note">We arrange seasonal and long-term stays only. Short stays are not offered.</p>
           </div>
-          <div class="form-row">
-            <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-            <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+
+          <div class="wizard-step" data-step="2" role="group" aria-labelledby="step2-title" hidden>
+            <h3 id="step2-title">Guests</h3>
+            <div class="form-row">
+              <div>
+                <label for="adults">Adults</label>
+                <input id="adults" name="adults" type="number" min="1" step="1" value="1" required>
+              </div>
+              <div>
+                <label for="kids">Kids</label>
+                <input id="kids" name="kids" type="number" min="0" step="1" value="0" required>
+              </div>
+            </div>
+            <fieldset class="pet-field">
+              <legend>Pets</legend>
+              <label class="radio-inline"><input type="radio" name="pets" value="Yes" required> Yes</label>
+              <label class="radio-inline"><input type="radio" name="pets" value="No"> No</label>
+            </fieldset>
           </div>
-          <div><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea></div>
-          <p class="form-note">An inquiry is not a booking or a confirmation. Matthew confirms dates personally.</p>
-          <div><button class="btn" type="submit">Send inquiry</button></div>
+
+          <div class="wizard-step" data-step="3" role="group" aria-labelledby="step3-title" hidden>
+            <h3 id="step3-title">Your contact info</h3>
+            <div class="form-row">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="wizard-step" data-step="4" role="group" aria-labelledby="step4-title" hidden>
+            <h3 id="step4-title">Questions and review</h3>
+            <div>
+              <label for="message">Questions or notes</label>
+              <textarea id="message" name="message" rows="4" placeholder="Anything Matthew should know about your stay"></textarea>
+            </div>
+            <div class="review-card" id="review-summary" aria-live="polite"></div>
+            <div class="card notice-box" role="note">
+              <p><strong>Due to renovations in progress, the home is temporarily unavailable. Please still submit your request and we'll be in touch.</strong></p>
+              <p>This is a request only, not a booking or a confirmation. No payment is taken.</p>
+            </div>
+          </div>
+
+          <div class="wizard-nav btn-row">
+            <button class="btn secondary" type="button" id="wizard-back" hidden>Back</button>
+            <button class="btn" type="button" id="wizard-next">Next</button>
+            <button class="btn" type="submit" id="wizard-submit" hidden>Submit request</button>
+          </div>
           <p id="form-status" role="status" tabindex="-1" aria-live="polite"></p>
         </form>
         <p>Prefer to talk? Call <a href="tel:+15188329174">518-832-9174</a>.</p>
@@ -91,11 +163,11 @@
         Phone: <a href="tel:+15188329174">518-832-9174</a></p>
       </div>
       <div>
-        <p><a href="index.html">Book direct</a><br>
+        <p><a href="index.html">Request a stay</a><br>
         <a href="guide.html">Guest guide</a></p>
       </div>
     </div>
-    <p class="wrap small">© <span data-year>2026</span> <span data-site="name">The Hayes House</span>. For select guests by invitation only.</p>
+    <p class="wrap small">&copy; <span data-year>2026</span> <span data-site="name">The Hayes House</span>. For select guests by invitation only.</p>
   </footer>
 </body>
 </html>

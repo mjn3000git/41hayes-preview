@@ -1,1 +1,3 @@
-# Preview only: 41hayes.com direct booking and guest guide. Not live.
+# 41hayes-preview
+
+Preview only: seasonal/long-term stay request and guest guide. Not live. noindex. Form posts to Formspree myeeepde.

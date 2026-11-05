@@ -176,3 +176,23 @@ ul.checks li::marker { color: var(--brass-dark); }
 .footer-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+
+
+/* Multi-step stay request wizard */
+.wizard-progress { display: flex; gap: .5rem; margin-bottom: .75rem; }
+.wizard-dot { width: 2rem; height: .35rem; border-radius: 999px; background: var(--line); }
+.wizard-dot.is-active, .wizard-dot.is-done { background: var(--navy); }
+.wizard-step-label { margin: 0 0 1rem; font: 600 .78rem var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.wizard-step h3 { margin-top: 0; }
+.wizard-step[hidden] { display: none !important; }
+.wizard-nav { margin-top: .25rem; }
+.pet-field { border: 0; padding: 0; margin: 0; }
+.pet-field legend { font: 600 .78rem var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--navy); margin-bottom: .35rem; }
+.radio-inline { display: inline-flex; align-items: center; gap: .4rem; margin-right: 1.25rem; font: 500 1rem var(--sans); letter-spacing: 0; text-transform: none; color: var(--ink); }
+.radio-inline input { width: auto; margin: 0; }
+.review-card { background: var(--mist); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.15rem; margin: .5rem 0 1rem; }
+.review-card h4 { margin: 0 0 .6rem; font: 600 1.05rem var(--serif); color: var(--navy); }
+.review-card ul { margin: 0; padding-left: 1.1rem; }
+.review-card li { margin: .25rem 0; }
+.notice-box { border-top-color: var(--bronze); background: #fffaf3; }
+.notice-box p:last-child { margin-bottom: 0; }
