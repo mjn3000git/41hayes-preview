@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Book Direct | The Hayes House (Preview)</title>
+  <meta name="description" content="Book the Hayes House directly with Matthew.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="draft-banner" role="note">Preview only. Not the live site. For select guests by invitation only.</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 48 48" width="28" height="28" focusable="false"><path d="M23 7 V33 H10 Z" fill="currentColor"/><path d="M26 13 V33 H37 Z" fill="currentColor" opacity=".6"/><path d="M7 36 H41 L36.5 41 H11.5 Z" fill="currentColor"/></svg></span>
+        <span><span class="logo-name" data-site="name">The Hayes House</span><span class="logo-sub">Schroon Lake, NY</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" class="nav-cta">Book Direct</a></li>
+          <li><a href="guide.html">Guest Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>Coming soon to VRBO. Book directly with Matthew.</h1>
+        <p>The Hayes House will be listed on VRBO soon. Until then, and after, you can always book directly with Matthew and skip the booking fees.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <img class="feature-photo" src="images/front-of-house-1000.jpg" alt="Front of the Hayes House" style="max-width:100%;border-radius:8px">
+        <h2>About the stay</h2>
+        <p>41 Hayes Road sits about 300 feet from Schroon Lake, with a short walk to shared public beach access. It is a quiet Adirondack home base for families and friends.</p>
+
+        <h2>How booking works</h2>
+        <ol>
+          <li>Send your dates below.</li>
+          <li>Matthew reads every request and replies personally.</li>
+          <li>Once Matthew replies, your requested dates get a tentative hold on our calendar while we work out the details.</li>
+          <li>Your stay is booked only when Matthew confirms it with you directly.</li>
+        </ol>
+        <div class="card" role="note"><p><strong>Please note:</strong> sending an inquiry is not a booking or a confirmation. Matthew confirms dates personally.</p></div>
+
+        <h2>Request your dates</h2>
+        <form class="inquiry" id="inquiry-form" action="https://formspree.io/f/xbgggqqk" method="POST">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="Hayes stay inquiry">
+          <div class="form-row">
+            <div><label for="arrive">Check-in</label><input id="arrive" name="check_in" type="date" required></div>
+            <div><label for="depart">Check-out</label><input id="depart" name="check_out" type="date" required></div>
+          </div>
+          <div class="form-row">
+            <div><label for="guests">Guests</label><input id="guests" name="guests" type="number" min="1" required></div>
+            <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+          </div>
+          <div class="form-row">
+            <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea></div>
+          <p class="form-note">An inquiry is not a booking or a confirmation. Matthew confirms dates personally.</p>
+          <div><button class="btn" type="submit">Send inquiry</button></div>
+          <p id="form-status" role="status" tabindex="-1" aria-live="polite"></p>
+        </form>
+        <p>Prefer to talk? Call <a href="tel:+15188329174">518-832-9174</a>.</p>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+    <svg class="ridge" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 50 L110 32 L190 42 L320 14 L430 38 L540 24 L650 44 L780 10 L900 36 L1010 22 L1120 40 L1200 30" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <div class="wrap footer-grid">
+      <div>
+        <p><span class="logo-name" data-site="name">The Hayes House</span>
+        A private Adirondack retreat in Schroon Lake, NY, kept for family, friends, and select guests.</p>
+      </div>
+      <div>
+        <p><strong>Contact</strong><br>
+        Matthew Nothdurft<br>
+        Phone: <a href="tel:+15188329174">518-832-9174</a></p>
+      </div>
+      <div>
+        <p><a href="index.html">Book direct</a><br>
+        <a href="guide.html">Guest guide</a></p>
+      </div>
+    </div>
+    <p class="wrap small">© <span data-year>2026</span> <span data-site="name">The Hayes House</span>. For select guests by invitation only.</p>
+  </footer>
+</body>
+</html>
