@@ -178,6 +178,9 @@ ul.checks li::marker { color: var(--brass-dark); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 
 
+
+/* Respect the hidden attribute even on .btn */
+.btn[hidden], button[hidden] { display: none !important; }
 /* Multi-step stay request wizard */
 .wizard-progress { display: flex; gap: .5rem; margin-bottom: .75rem; }
 .wizard-dot { width: 2rem; height: .35rem; border-radius: 999px; background: var(--line); }
