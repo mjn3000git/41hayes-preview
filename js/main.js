@@ -167,10 +167,10 @@ document.addEventListener("DOMContentLoaded", function () {
         showStep(1);
         if (status) status.textContent = "Thanks, your request was received. Matthew will be in touch.";
       } else if (status) {
-        status.textContent = "Sorry, something went wrong. Please call 518-832-9174.";
+        status.textContent = "Sorry, something went wrong. Please call 518-868-6689.";
       }
     }).catch(function () {
-      if (status) status.textContent = "Sorry, something went wrong. Please call 518-832-9174.";
+      if (status) status.textContent = "Sorry, something went wrong. Please call 518-868-6689.";
     }).then(function () {
       if (btn) btn.disabled = false;
       if (status) status.focus();
